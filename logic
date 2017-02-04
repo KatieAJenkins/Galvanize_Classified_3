@@ -1,0 +1,5 @@
+//hook up ui-router
+////add dependency to app.module.js
+////add dependencies to app.config.js
+////add base ref to index.html
+//create form template

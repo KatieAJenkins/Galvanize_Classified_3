@@ -1,0 +1,65 @@
+<!-- <h1>Post Template</h1> -->
+
+<!--FILTER POSTS-->
+<section>
+<h3>Filter By:</h3>
+  <label for = "titleFilter"></label>
+  <input type = "search" ng-model="$ctrl.searchByTitle" placeholder = "title">
+
+  <label for = "descriptionFilter"></label>
+  <input type = "search" ng-model="$ctrl.searchByDesc" placeholder = "description">
+</section>
+<br>
+
+<!--SORT BY-->
+<section>
+  <h3>Sort By</h3>
+    <button ng-click ="$ctrl.setPropertyName ('date')">Date</button>
+    <button ng-click ="$ctrl.setPropertyName ('price')">Price</button>
+</section>
+<br>
+
+<!--NEW POST FORM-->
+<section>
+  <form name = "$ctrl.submitNewPost()" ng-submit = "$ctrl.submitNewPost($ctrl.post.title, $ctrl.post.description, $ctrl.post.price, $ctrl.post.item_image)">
+    <label for = "title">Title</label>
+      <input
+        id= "title"
+        type = "text"
+        name = "title"
+        ng-model = "$ctrl.post.title">
+
+    <label for = "description">Description</label>
+      <input
+        id = "description"
+        type = "text"
+        name = "description"
+        ng-model = "$ctrl.post.description">
+
+    <label for = "price">Price</label>
+      <input
+        id = "price"
+        type = "text"
+        name = "title"
+        ng-model = "$ctrl.post.price">
+
+    <label for = "item_image">Item Image</label>
+      <input
+      id = "item_image"
+      type = "text"
+      name = "item_image"
+      ng-model = "$ctrl.post.item_image">
+
+    <button name = "submit">Submit</button>
+
+  </form>
+</section>
+
+<!--SHOW POSTS-->
+<section ng-repeat = "post in $ctrl.classifieds | filter:$ctrl.searchByTitle | filter:$ctrl.searchByDesc | orderBy:$ctrl.sort">
+  <h3>Title: {{post.title}} </h3>
+  <a ui-sref = "updatePost({id: post.id})">{{post.description}}</a>
+  <p>Price: {{post.price}} </p>
+  <img ng-src ="{{post.item_image}}">
+  <br>
+</section>

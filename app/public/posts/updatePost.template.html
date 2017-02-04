@@ -1,0 +1,50 @@
+<!--SHOW POSTS-->
+<!-- <section ng-repeat = "post in $ctrl.classifieds">
+  <h2>Title: {{post.title}} </h2>
+  <br>
+</section> -->
+
+<!--EDIT POST-->
+<section>
+  <form name = "updatePostForm" ng-submit = "$ctrl.updatePost()">
+    <label for ="title">Title</label>
+    <input
+      id = "updateTitle"
+      type = "text"
+      name = "title"
+      ng-model = "$ctrl.post.title">
+
+      <label for ="description">Description</label>
+      <textarea
+        id = "updateDescription"
+        type = "text"
+        name = "description"
+        ng-model = "$ctrl.post.description"></textarea>
+
+      <label for ="price">Price</label>
+      <input
+        id = "updatePrice"
+        type = "text"
+        name = "price"
+        ng-model = "$ctrl.post.price">
+
+      <label for ="item_image">Item Image</label>
+      <input
+        id = "updateImage"
+        type = "text"
+        name = "item_image"
+        ng-model = "$ctrl.post.item_image">
+
+      <button type = "submit">Update Post</button>
+    </form>
+  </section>
+
+  <!--DELETE POST-->
+  <section>
+    <form>
+      <label for ="delete"></label>
+        <button type = "button" ng-click = "$ctrl.deletePost()">
+          Delete Post
+        </button>
+    </form>
+  </section>
