@@ -59,7 +59,7 @@
 <section ng-repeat = "post in $ctrl.classifieds | filter:$ctrl.searchByTitle | filter:$ctrl.searchByDesc | orderBy:$ctrl.sort">
   <h3>Title: {{post.title}} </h3>
   <a ui-sref = "updatePost({id: post.id})">{{post.description}}</a>
-  <p>Price: {{post.price}} </p>
-  <img ng-src ="{{post.item_image}}">
+  <p>Price: {{post.price | currency}} </p>
+  <img ng-src ="{{post.item_image }}">
   <br>
 </section>
