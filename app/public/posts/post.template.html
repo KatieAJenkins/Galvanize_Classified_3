@@ -2,7 +2,7 @@
 
 <!--NEW POST FORM-->
 <main>
-<section id = "newPostForm">
+<section class = "section" id = "newPostForm">
   <form name = "$ctrl.submitNewPost()" ng-submit = "$ctrl.submitNewPost($ctrl.post.title, $ctrl.post.description, $ctrl.post.price, $ctrl.post.item_image)">
     <h1>Write New Post Here!</h1>
     <label for = "title">Title</label>
@@ -47,30 +47,35 @@
 </section>
 
 <!--FILTER POSTS-->
-<section>
-  <h3>Filter By:</h3>
-  <label for = "titleFilter"></label>
-  <input type = "search" ng-model="$ctrl.searchByTitle" placeholder = "title">
+<section class = "section">
 
-  <label for = "descriptionFilter"></label>
-  <input type = "search" ng-model="$ctrl.searchByDesc" placeholder = "description">
-</section>
-<br>
+  <div id = "filterBy" class = "filterSort">
+    <h3>Filter By:</h3>
+    <label for = "titleFilter"></label>
+    <input type = "search" ng-model="$ctrl.searchByTitle" placeholder = "title">
+
+    <label for = "descriptionFilter"></label>
+    <input type = "search" ng-model="$ctrl.searchByDesc" placeholder = "description">
+  </div>
 
 <!--SORT BY-->
-<section>
-  <h3>Sort By</h3>
-  <button ng-click ="$ctrl.setPropertyName ('date')">Date</button>
-  <button ng-click ="$ctrl.setPropertyName ('price')">Price</button>
+  <div id = "sortBy" class = "filterSort">
+    <h3>Sort By</h3>
+    <button ng-click ="$ctrl.setPropertyName ('date')">Date</button>
+    <button ng-click ="$ctrl.setPropertyName ('price')">Price</button>
+  </div>
 </section>
 <br>
 
 <!--SHOW POSTS-->
-<section ng-repeat = "post in $ctrl.classifieds | filter:$ctrl.searchByTitle | filter:$ctrl.searchByDesc | orderBy:$ctrl.sort">
-  <h3>Title: {{post.title}} </h3>
-  <a ui-sref = "updatePost({id: post.id})">{{post.description}}</a>
-  <p>Price: {{post.price | currency}} </p>
-  <img ng-src ="{{post.item_image }}">
-  <br>
+
+<section class = "section" id ="showPosts">
+  <div ng-repeat = "post in $ctrl.classifieds | filter:$ctrl.searchByTitle | filter:$ctrl.searchByDesc | orderBy:$ctrl.sort">
+    <h3>Title: {{post.title}} </h3>
+    <a ui-sref = "updatePost({id: post.id})">{{post.description}}</a>
+    <p>Price: {{post.price | currency}} </p>
+    <img class = "images" ng-src ="{{post.item_image }}">
+    <br>
+  </div>
 </section>
 </main>

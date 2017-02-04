@@ -8,11 +8,16 @@ h1 {
   color: white;
 }
 
+.section {
+  margin: 10%;
+  /*padding: 2px;*/
+}
+
 #newPostForm {
   margin: auto;
   height: 200px;
   min-width: 250px;
-  max-width: 300px;
+  max-width: 350px;
   background-color: rgb(0,139,139);
   border-radius: 25px;
   display: flex;
@@ -20,7 +25,25 @@ h1 {
   align-items: center;
 }
 
-.inputField {
-  /*display: flex;*/
-  /*justify-content: flex-start;*/
+.filterSort {
+  /*background-color: #80cBc4;*/
+  background-color: blue;
+}
+
+#filterBy {
+  float: right;
+}
+
+#sortBy {
+  float: left;
+}
+
+#showPosts {
+  margin-top: 10%;
+  background-color: yellow; ;
+}
+
+.images {
+  height: 25%;
+  width: 25%;
 }
