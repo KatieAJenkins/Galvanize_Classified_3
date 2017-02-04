@@ -1,17 +1,21 @@
-/*.responsive {
-  float: left;
+main {
+  background-color: rgb(200,200,200);
   margin: 5px;
   padding: 15px;
-  max-width: 300px;
-  height: 300px;
-  border: 1px solid black;
-}*/
+}
+
+h1 {
+  color: white;
+}
 
 #newPostForm {
-  display: flex;
-  background-color: blue;
+  margin: auto;
   height: 200px;
+  min-width: 250px;
   max-width: 300px;
+  background-color: rgb(0,139,139);
+  border-radius: 25px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
