@@ -2,10 +2,10 @@
 
 <!--NEW POST FORM-->
 <main>
-<section class = "section" id = "newPostForm">
+<section id = "newPostForm">
   <form name = "$ctrl.submitNewPost()" ng-submit = "$ctrl.submitNewPost($ctrl.post.title, $ctrl.post.description, $ctrl.post.price, $ctrl.post.item_image)">
     <h1>Write New Post Here!</h1>
-    <label for = "title">Title</label>
+    <label class ="labels" for = "title">Title</label>
       <input
         id= "title"
         class = "inputField"
@@ -23,7 +23,7 @@
         ng-model = "$ctrl.post.description">
       <br>
 
-    <label for = "price">Price</label>
+    <label class ="labels" for = "price">Price</label>
       <input
         id = "price"
         class = "inputField"
@@ -32,7 +32,7 @@
         ng-model = "$ctrl.post.price">
       <br>
 
-    <label for = "item_image">Item Image</label>
+    <label class ="labels" for = "item_image">Item Image</label>
       <input
       id = "item_image"
       class = "inputField"
@@ -41,7 +41,7 @@
       ng-model = "$ctrl.post.item_image">
     <br>
 
-    <button name = "submit">Submit</button>
+    <button class = "buttons" name = "submit">Submit</button>
 
   </form>
 </section>
@@ -68,13 +68,20 @@
 <br>
 
 <!--SHOW POSTS-->
-
 <section class = "section" id ="showPosts">
-  <div ng-repeat = "post in $ctrl.classifieds | filter:$ctrl.searchByTitle | filter:$ctrl.searchByDesc | orderBy:$ctrl.sort">
-    <h3>Title: {{post.title}} </h3>
-    <a ui-sref = "updatePost({id: post.id})">{{post.description}}</a>
+  <div ng-repeat = "post in $ctrl.classifieds | filter:$ctrl.searchByTitle | filter:$ctrl.searchByDesc | orderBy:$ctrl.sort" class = "post">
+
+    <div class = "post">
+    <h4>Title: {{post.title}} </h4>
+
+    <p><a ui-sref = "updatePost({id: post.id})">{{post.description}}</a></p>
+
     <p>Price: {{post.price | currency}} </p>
-    <img class = "images" ng-src ="{{post.item_image }}">
+  </div>
+
+    <!-- <div class = "post"  -->
+      <img id = "postImage" class = "images" ng-src ="{{post.item_image }}">
+    <!-- </div> -->
     <br>
   </div>
 </section>
