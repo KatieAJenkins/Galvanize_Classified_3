@@ -37,7 +37,7 @@
           // .then(results => {
           //   console.log(results);
             // $state.href('/');
-            $state.go('/classifieds')
+            $state.go('/')
             // $location.path('/');
           // });
       }

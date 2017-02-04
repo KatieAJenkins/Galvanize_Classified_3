@@ -1,0 +1,22 @@
+/*.responsive {
+  float: left;
+  margin: 5px;
+  padding: 15px;
+  max-width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}*/
+
+#newPostForm {
+  display: flex;
+  background-color: blue;
+  height: 200px;
+  max-width: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputField {
+  /*display: flex;*/
+  /*justify-content: flex-start;*/
+}
