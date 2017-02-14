@@ -59,8 +59,8 @@ h1 {
 }
 
 #postImage {
-  display: flex;
-  justify-content: flex-end;
+  float: right;
+  margin-top: -30px;
 }
 
 .post {

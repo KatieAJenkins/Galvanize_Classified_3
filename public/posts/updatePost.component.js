@@ -31,24 +31,25 @@
 
       function updatePost() {
         // console.log(post);
-        $http.patch (`/api/classifieds/${$stateParams.id}` , vm.post);
-        console.log("patch post", vm.post)
+        $http.patch (`/api/classifieds/${$stateParams.id}` , vm.post)
+        console.log("patch post", vm.post);
 
-          // .then(results => {
-          //   console.log(results);
-            // $state.href('/');
-            $state.go('/')
-            // $location.path('/');
+          // .then(response => {
+          //   response.data;
+          //   console.log(response.data);
+          //   // $state.href('/');
+          //   return $state.go('postMessage');
+          //   // $location.path('/');
           // });
       }
 
       function deletePost() {
         $http.delete (`/api/classifieds/${$stateParams.id}` , vm.post);
-        console.log("deleting post ", vm.post)
+        console.log("deleting post ", vm.post);
           //
           // .then (results => {
           //   console.log(results);
-            $state.href('/');
+            // $state.href('postMessage');
           // });
       }
     }

@@ -4,11 +4,12 @@
   "engines": {
     "node": "7.1.0"
   },
-  "main": "./app/server.js",
+  "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start": "node ./app/server.js",
-    "test": "mocha"
+    "start": "node server.js",
+    "test": "mocha",
+    "heroku-postbuild": "heroku run knex migrate:latest && heroku run knex seed:run"
   },
   "keywords": [],
   "author": "",

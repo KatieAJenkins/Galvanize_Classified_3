@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname,'public')));
-app.use(express.static(path.join(__dirname, '/../', 'node_modules')));
+app.use(express.static(path.join(__dirname, '/./', 'node_modules')));
 
 const messages = require('./routes/classifieds');
 
