@@ -42,5 +42,8 @@ h1 {
 .images {
   max-height: 200px;
   max-width: 150px;
+}
 
+.btn {
+  margin: 10px;
 }
