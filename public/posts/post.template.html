@@ -54,7 +54,7 @@
   <section class = "row">
 
     <div id = "filterBy" class = "filterSort">
-      <h3>Filter By:</h3>
+      <h3>Filter By</h3>
       <label for = "titleFilter"></label>
       <input type = "search" ng-model="$ctrl.searchByTitle" placeholder = "title">
 
@@ -71,22 +71,22 @@
   </section>
 <br>
 
-<!--SHOW POSTS-->
-<section class = "section" id ="showPosts">
-  <div ng-repeat = "post in $ctrl.classifieds | filter:$ctrl.searchByTitle | filter:$ctrl.searchByDesc | orderBy:$ctrl.sort" class = "post">
+  <!--SHOW POSTS-->
+  <section class = "row" id ="showPosts">
+    <div ng-repeat = "post in $ctrl.classifieds | filter:$ctrl.searchByTitle | filter:$ctrl.searchByDesc | orderBy:$ctrl.sort" class = "post">
 
-    <div class = "post">
-    <h4>Title: {{post.title}} </h4>
+      <div class = "post">
+      <h4>Title: {{post.title}} </h4>
 
-    <p><a ui-sref = "updatePost({id: post.id})">{{post.description}}</a></p>
+      <p><a ui-sref = "updatePost({id: post.id})">{{post.description}}</a></p>
 
-    <p>Price: {{post.price | currency}} </p>
-  </div>
+      <p>Price: {{post.price | currency}} </p>
+    </div>
 
-    <!-- <div class = "post"  -->
-      <img id = "postImage" class = "images" ng-src ="{{post.item_image }}">
-    <!-- </div> -->
-    <br>
-  </div>
-</section>
+      <!-- <div class = "post"  -->
+        <img id = "postImage" class = "images" ng-src ="{{post.item_image }}">
+      <!-- </div> -->
+      <br>
+    </div>
+  </section>
 </main>
