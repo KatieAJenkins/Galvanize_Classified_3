@@ -75,7 +75,6 @@
   <section class = "row" id ="showPosts">
     <div class = "eachPost" ng-repeat = "post in $ctrl.classifieds | filter:$ctrl.searchByTitle | filter:$ctrl.searchByDesc | orderBy:$ctrl.sort">
 
-      <!-- <div class = "eachPost"> -->
         <div class = "col-md-3">
           <h3>{{post.title}} </h3>
         </div>
@@ -94,6 +93,5 @@
           <img class = "images" ng-src ="{{post.item_image }}">
         </div>
       </div>
-    <!-- </div> -->
   </section>
 </main>
