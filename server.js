@@ -4,6 +4,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+const env = require('dotenv').config();
+
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
