@@ -5,38 +5,40 @@
 </section> -->
 <main>
 <!--EDIT POST-->
-<section>
-  <form name = "updatePostForm" ng-submit = "$ctrl.updatePost()">
-    <label for ="title">Title</label>
-    <input
-      id = "updateTitle"
-      type = "text"
-      name = "title"
-      ng-model = "$ctrl.post.title">
-
-      <label for ="description">Description</label>
-      <textarea
-        id = "updateDescription"
-        type = "text"
-        name = "description"
-        ng-model = "$ctrl.post.description"></textarea>
-
-      <label for ="price">Price</label>
+<section class = "container-fluid">
+  <div class = "col-md-12">
+    <form name = "updatePostForm" ng-submit = "$ctrl.updatePost()">
+      <label for ="title">Title</label>
       <input
-        id = "updatePrice"
+        id = "updateTitle"
         type = "text"
-        name = "price"
-        ng-model = "$ctrl.post.price">
+        name = "title"
+        ng-model = "$ctrl.post.title">
 
-      <label for ="item_image">Item Image</label>
-      <input
-        id = "updateImage"
-        type = "text"
-        name = "item_image"
-        ng-model = "$ctrl.post.item_image">
+        <label for ="description">Description</label>
+        <textarea
+          id = "updateDescription"
+          type = "text"
+          name = "description"
+          ng-model = "$ctrl.post.description"></textarea>
 
-      <button type = "submit">Update Post</button>
-    </form>
+        <label for ="price">Price</label>
+        <input
+          id = "updatePrice"
+          type = "text"
+          name = "price"
+          ng-model = "$ctrl.post.price">
+
+        <label for ="item_image">Item Image</label>
+        <input
+          id = "updateImage"
+          type = "text"
+          name = "item_image"
+          ng-model = "$ctrl.post.item_image">
+
+        <button type = "submit">Update Post</button>
+      </form>
+    </div>
   </section>
 
   <!--DELETE POST-->

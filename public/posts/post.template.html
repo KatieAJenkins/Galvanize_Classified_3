@@ -1,48 +1,50 @@
 <!-- <h1>Post Template</h1> -->
 
 <!--NEW POST FORM-->
-<main>
+<main class = "container-fluid">
 <section id = "newPostForm">
   <form name = "$ctrl.submitNewPost()" ng-submit = "$ctrl.submitNewPost($ctrl.post.title, $ctrl.post.description, $ctrl.post.price, $ctrl.post.item_image)">
-    <h1>Write New Post Here!</h1>
-    <label class ="labels" for = "title">Title</label>
-      <input
-        id= "title"
-        class = "inputField"
+    <div class = "form-group">
+      <h1>Write New Post Here!</h1>
+      <label class ="labels" for = "title">Title</label>
+        <input
+          id= "title"
+          class = "form-control"
+          type = "text"
+          name = "title"
+          ng-model = "$ctrl.post.title">
+        <br>
+
+      <label for = "description">Description</label>
+        <input
+          id = "description"
+          class = "form-control"
+          type = "text"
+          name = "description"
+          ng-model = "$ctrl.post.description">
+        <br>
+
+      <label class ="labels" for = "price">Price</label>
+        <input
+          id = "price"
+          class = "form-control"
+          type = "text"
+          name = "title"
+          ng-model = "$ctrl.post.price">
+        <br>
+
+      <label class ="labels" for = "item_image">Item Image</label>
+        <input
+        id = "item_image"
+        class = "form-control"
         type = "text"
-        name = "title"
-        ng-model = "$ctrl.post.title">
+        name = "item_image"
+        ng-model = "$ctrl.post.item_image">
       <br>
 
-    <label for = "description">Description</label>
-      <input
-        id = "description"
-        class = "inputField"
-        type = "text"
-        name = "description"
-        ng-model = "$ctrl.post.description">
-      <br>
+      <button class = "btn btn-default" name = "submit">Submit</button>
 
-    <label class ="labels" for = "price">Price</label>
-      <input
-        id = "price"
-        class = "inputField"
-        type = "text"
-        name = "title"
-        ng-model = "$ctrl.post.price">
-      <br>
-
-    <label class ="labels" for = "item_image">Item Image</label>
-      <input
-      id = "item_image"
-      class = "inputField"
-      type = "text"
-      name = "item_image"
-      ng-model = "$ctrl.post.item_image">
-    <br>
-
-    <button class = "buttons" name = "submit">Submit</button>
-
+    </div>
   </form>
 </section>
 
