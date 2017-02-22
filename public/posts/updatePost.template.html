@@ -5,49 +5,74 @@
 </section> -->
 <main>
 <!--EDIT POST-->
-<section class = "container-fluid">
-  <div class = "col-md-12">
+  <section class = "container-fluid">
+    <div class = "row">
     <form name = "updatePostForm" ng-submit = "$ctrl.updatePost()">
-      <label for ="title">Title</label>
-      <input
-        id = "updateTitle"
-        type = "text"
-        name = "title"
-        ng-model = "$ctrl.post.title">
 
-        <label for ="description">Description</label>
-        <textarea
-          id = "updateDescription"
+      <div class = "col-md-2 form-group">
+        <label for ="title">Title</label>
+        <br>
+        <input
+          id = "updateTitle"
+          class="form-control"
           type = "text"
-          name = "description"
-          ng-model = "$ctrl.post.description"></textarea>
+          name = "title"
+          ng-model = "$ctrl.post.title">
+      </div>
 
+      <div class = "col-md-3 form-group">
+        <label for ="description">Description</label>
+        <br>
+          <textarea
+            id = "updateDescription"
+            class="form-control"
+            type = "text"
+            name = "description"
+            ng-model = "$ctrl.post.description">
+          </textarea>
+      </div>
+
+      <div class = "col-md-2 form-group">
         <label for ="price">Price</label>
+        <br>
         <input
           id = "updatePrice"
+          class="form-control"
           type = "text"
           name = "price"
           ng-model = "$ctrl.post.price">
+      </div>
 
+      <div class = "col-md-3 form-group">
         <label for ="item_image">Item Image</label>
+        <br>
         <input
           id = "updateImage"
+          class="form-control"
           type = "text"
           name = "item_image"
           ng-model = "$ctrl.post.item_image">
+      </div>
 
-        <button type = "submit">Update Post</button>
-      </form>
-    </div>
+      <div class = "col-md-2 ">
+        <button class ="btn btn-default" type = "submit">
+          Update Post
+        </button>
+
+        <button class = "btn btn-default" ng-click = "$ctrl.deletePost()">
+        Delete Post
+        </button>
+      </div>
+
+    </form>
+  </div>
   </section>
 
   <!--DELETE POST-->
-  <section>
+  <!-- <section>
     <form>
       <label for ="delete"></label>
-        <button type = "button" ng-click = "$ctrl.deletePost()">
-          Delete Post
-        </button>
+
     </form>
-  </section>
+  </section> -->
 </main>
