@@ -29,20 +29,20 @@ h1 {
 }
 
 #showPosts {
-  padding: 30px;
+  /*padding: 30px;*/
   background-color: #ccffff;
   display: flex;
   flex-direction: column;
 }
 
+.eachPost {
+  border: dashed gray 1px;
+  padding: 15px;
+  margin: 10px;
+}
+
 .images {
   max-height: 200px;
   max-width: 150px;
-  float: right;
-  padding: 10px;
-}
 
-#postBox {
-  display: flex;
-  justify-content: flex-start;
 }

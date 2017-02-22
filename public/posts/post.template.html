@@ -73,25 +73,27 @@
 
   <!--SHOW POSTS-->
   <section class = "row" id ="showPosts">
-    <div ng-repeat = "post in $ctrl.classifieds | filter:$ctrl.searchByTitle | filter:$ctrl.searchByDesc | orderBy:$ctrl.sort">
+    <div class = "eachPost" ng-repeat = "post in $ctrl.classifieds | filter:$ctrl.searchByTitle | filter:$ctrl.searchByDesc | orderBy:$ctrl.sort">
 
-      <div class = "col-md-3">
-        <h3>{{post.title}} </h3>
-      </div>
+      <!-- <div class = "eachPost"> -->
+        <div class = "col-md-3">
+          <h3>{{post.title}} </h3>
+        </div>
 
-      <div class = "col-md-3">
-        <h5>Description</h5>
-        <a ui-sref = "updatePost({id: post.id})">{{post.description}}</a>
-      </div>
+        <div class = "col-md-3">
+          <h4>Description</h4>
+          <a ui-sref = "updatePost({id: post.id})">{{post.description}}</a>
+        </div>
 
-      <div class = "col-md-3">
-        <h5>Price</h5>
-          {{post.price | currency}}
-      </div>
+        <div class = "col-md-3">
+          <h4>Price</h4>
+            {{post.price | currency}}
+        </div>
 
-      <div class = "col-md-3 images">
-        <img class = "images" ng-src ="{{post.item_image }}">
+        <div class = "col-md-3 images">
+          <img class = "images" ng-src ="{{post.item_image }}">
+        </div>
       </div>
-    </div>
+    <!-- </div> -->
   </section>
 </main>
