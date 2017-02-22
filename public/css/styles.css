@@ -30,7 +30,7 @@ h1 {
 
 #showPosts {
   /*padding: 30px;*/
-  background-color: #ccffff;
+  /*background-color: #ccffff;*/
   display: flex;
   flex-direction: column;
 }
