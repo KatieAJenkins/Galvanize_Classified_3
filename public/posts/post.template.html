@@ -2,73 +2,73 @@
 
 <!--NEW POST FORM-->
 <main class = "container-fluid">
-<section id = "newPostForm">
-  <form name = "$ctrl.submitNewPost()" ng-submit = "$ctrl.submitNewPost($ctrl.post.title, $ctrl.post.description, $ctrl.post.price, $ctrl.post.item_image)">
-    <div class = "form-group">
-      <h1>Write New Post Here!</h1>
-      <label class ="labels" for = "title">Title</label>
-        <input
-          id= "title"
+  <section class = "row" id = "newPostForm">
+    <form name = "$ctrl.submitNewPost()" ng-submit = "$ctrl.submitNewPost($ctrl.post.title, $ctrl.post.description, $ctrl.post.price, $ctrl.post.item_image)">
+      <div class = "form-group">
+        <h1>Write New Post Here!</h1>
+        <label class ="labels" for = "title">Title</label>
+          <input
+            id= "title"
+            class = "form-control"
+            type = "text"
+            name = "title"
+            ng-model = "$ctrl.post.title">
+          <br>
+
+        <label for = "description">Description</label>
+          <textarea
+            id = "description"
+            class = "form-control"
+            row = "2"
+            type = "text"
+            name = "description"
+            ng-model = "$ctrl.post.description">
+            </textarea>
+          <br>
+
+        <label class ="labels" for = "price">Price</label>
+          <input
+            id = "price"
+            class = "form-control"
+            type = "text"
+            name = "price"
+            ng-model = "$ctrl.post.price">
+          <br>
+
+        <label class ="labels" for = "item_image">Item Image</label>
+          <input
+          id = "item_image"
           class = "form-control"
           type = "text"
-          name = "title"
-          ng-model = "$ctrl.post.title">
+          name = "item_image"
+          ng-model = "$ctrl.post.item_image">
         <br>
 
-      <label for = "description">Description</label>
-        <textarea
-          id = "description"
-          class = "form-control"
-          row = "2"
-          type = "text"
-          name = "description"
-          ng-model = "$ctrl.post.description">
-          </textarea>
-        <br>
+        <button class = "btn btn-default" name = "submit">Submit</button>
 
-      <label class ="labels" for = "price">Price</label>
-        <input
-          id = "price"
-          class = "form-control"
-          type = "text"
-          name = "title"
-          ng-model = "$ctrl.post.price">
-        <br>
+      </div>
+    </form>
+  </section>
 
-      <label class ="labels" for = "item_image">Item Image</label>
-        <input
-        id = "item_image"
-        class = "form-control"
-        type = "text"
-        name = "item_image"
-        ng-model = "$ctrl.post.item_image">
-      <br>
+  <!--FILTER POSTS-->
+  <section class = "row">
 
-      <button class = "btn btn-default" name = "submit">Submit</button>
+    <div id = "filterBy" class = "filterSort">
+      <h3>Filter By:</h3>
+      <label for = "titleFilter"></label>
+      <input type = "search" ng-model="$ctrl.searchByTitle" placeholder = "title">
 
+      <label for = "descriptionFilter"></label>
+      <input type = "search" ng-model="$ctrl.searchByDesc" placeholder = "description">
     </div>
-  </form>
-</section>
 
-<!--FILTER POSTS-->
-<section class = "section">
-
-  <div id = "filterBy" class = "filterSort">
-    <h3>Filter By:</h3>
-    <label for = "titleFilter"></label>
-    <input type = "search" ng-model="$ctrl.searchByTitle" placeholder = "title">
-
-    <label for = "descriptionFilter"></label>
-    <input type = "search" ng-model="$ctrl.searchByDesc" placeholder = "description">
-  </div>
-
-<!--SORT BY-->
-  <div id = "sortBy" class = "filterSort">
-    <h3>Sort By</h3>
-    <button ng-click ="$ctrl.setPropertyName ('date')">Date</button>
-    <button ng-click ="$ctrl.setPropertyName ('price')">Price</button>
-  </div>
-</section>
+  <!--SORT BY-->
+    <div id = "sortBy" class = "filterSort">
+      <h3>Sort By</h3>
+      <button ng-click ="$ctrl.setPropertyName ('date')">Date</button>
+      <button ng-click ="$ctrl.setPropertyName ('price')">Price</button>
+    </div>
+  </section>
 <br>
 
 <!--SHOW POSTS-->
