@@ -12,9 +12,9 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.static(path.join(__dirname, '/./', 'node_modules')));
 
-const messages = require('./routes/classifieds');
+const classifieds = require('./routes/classifieds');
 
-app.use('/api/classifieds',messages);
+app.use('/api/classifieds',classifieds);
 
 app.use('*', function(req, res, next) {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')});
